@@ -1,0 +1,219 @@
+body {
+ background-color: #000000;
+background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  height: 100vh;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+ max-height: 10000px;
+  margin: 0px;
+  padding: 0 0px;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background-color: #3fb573;
+  font-size: 1em;
+  text-align: center;
+  padding: 10px 15px;
+  border: 0;
+  margin: 10px 0;
+}
+
+header {
+  height: 150px;
+}
+
+header img {
+  width: 400px;
+    height: 100px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  height: 100px;
+}
+
+input[type='text'] {
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 5px;
+  width: 60%;
+  margin: auto;
+  outline: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box{
+    position: relative;
+    width:250px;
+    height: 300px;
+    background: #000;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.5);
+}
+
+.box .charImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.box .charImg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5S;
+}
+
+.box:hover .charImg img{
+    opacity: 0;
+}
+
+.box .content{
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    height: 50px;
+    background: #fff;
+    transition: 0.5s;
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.box:hover .content{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.box .content h3{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+.box:hover .content h3{
+    border-bottom: 1px dashed;
+    border-bottom-color: black;
+}
+
+.box .content p{
+    margin: 10px 0 0;
+    padding: 0;
+    opacity: 0;
+    line-height: 1.2em;
+    transition: 0.25s;
+    text-align: justify;
+    font-family: sans-serif;
+    font-style: oblique;
+}
+
+.box:hover .content p{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+}
+
+.paginationcss{
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    display: flex;
+    margin:4em 0em 3em 0em;
+    padding: 0 10px;;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.pageitem{
+    list-style: none;
+}
+
+.pagelink{
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    color: #262626;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 5px;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.5);   
+}
+
+.pagelink:hover{
+    background: #000;
+    color: #fff;
+}
+
+.footerImg img{
+    padding: 1em 0 0 0;
+    margin: 6em 0 0 0;
+    height: 250px;
+    width: 100%;
+}
+
+.footerImg img:hover{
+    transform: scale(1.05);
+}
+
+h4{
+   text-align: center;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
